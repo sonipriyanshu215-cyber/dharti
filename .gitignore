@@ -1,0 +1,9 @@
+# Defensive — this project has no build step and no secrets, but keep these
+# out of the repo on principle (PLAN.md §7.1).
+.env
+.env.*
+node_modules/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db

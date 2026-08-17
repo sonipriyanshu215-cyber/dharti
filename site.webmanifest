@@ -1,0 +1,14 @@
+{
+  "name": "Dharti Namkeen & Sweets",
+  "short_name": "Dharti",
+  "description": "Sweets, namkeen and farsan from Dharti Namkeen & Sweets, Surat.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#fffaf2",
+  "theme_color": "#6b1620",
+  "icons": [
+    { "src": "/img/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/brand/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,9 @@
+# Keep authoring-only files out of the deployed output on Vercel
+# (mirrors the Cloudflare Pages "exclude from published output" list
+# in README.md "Deploy & rollback").
+PLAN.md
+README.md
+OWNER-INFO-CHECKLIST.md
+partials/
+tools/
+.htmlvalidate.js
