@@ -55,7 +55,6 @@ ${breadcrumbs(trail)}
           <p class="form-note" data-form-status></p>
         </div>
       </form>
-      <p class="form-note u-muted u-mt-md">Sent via <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer">Web3Forms</a>, a third-party form service — nothing is stored in a database on this site. See our <a href="/privacy-policy/">Privacy Policy</a>.</p>
     </div>
   </div>
 </section>

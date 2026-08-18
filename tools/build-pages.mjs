@@ -29,6 +29,7 @@ const SITE_NAME = "Dharti Namkeen & Sweets";
 // raw because it also feeds JSON-LD (via JSON.stringify), which must get a
 // literal "&", not the text "&amp;".
 const SITE_NAME_HTML = SITE_NAME.replace(/&/g, "&amp;");
+const LEGAL_NAME = "Dharti Food Products Private Limited";
 const DOMAIN = "https://www.dhartinamkeen.com"; // TBC — PLAN.md §11.2 #6
 const YEAR = new Date().getFullYear();
 
@@ -38,8 +39,8 @@ const WHATSAPP_DISPLAY = "+91&nbsp;98985&nbsp;75857";
 const WHATSAPP_NUMBER = "919898575857";
 
 const ADDRESS_UDHNA = {
-  street: "Ground Floor, Dharti House, A-10/8, Road No. 3, Udhna Udhyog Nagar (Udhna GIDC)",
-  locality: "Udhna, Surat",
+  street: "A8/10, Road No. 3, Udhyognagar, Udhna",
+  locality: "Surat",
   region: "Gujarat",
   postal: "394210",
 };
@@ -222,7 +223,7 @@ function footer() {
         </div>
       </div>
       <div class="footer-legal">
-        <p>&copy; ${YEAR} ${SITE_NAME_HTML}. 100% pure vegetarian. Prices available in-store / on WhatsApp only.</p>
+        <p>&copy; ${YEAR} ${LEGAL_NAME}. 100% pure vegetarian. Prices available in-store / on WhatsApp only.</p>
         <ul>
           <li><a href="/privacy-policy/">Privacy Policy</a></li>
           <li><a href="/terms/">Terms of Use</a></li>
