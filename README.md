@@ -62,6 +62,7 @@ All progressive enhancement — every page must work with JS disabled.
 | `lightbox.js` | gallery | Focus-trapped, keyboard-accessible photo lightbox. |
 | `map-embed.js` | outlets, contact | Click-to-load Google Maps iframe (nothing from Google loads on first paint). |
 | `filter.js` | products/namkeen | Client-side tag filter over already-rendered cards. |
+| `contact-form.js` | contact | Submits the contact form via `fetch` instead of a page navigation. The plain `<form>` still works with JS disabled — see `_headers`/`vercel.json` CSP and `#sent:target` in `main.css`. |
 
 ## Images
 

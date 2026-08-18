@@ -2,29 +2,34 @@ import { page, breadcrumbs, breadcrumbJsonLd } from "../build-pages.mjs";
 
 const trail = [{ label: "Home", href: "/" }, { label: "Gallery" }];
 
-const captions = [
-  "Udhna outlet shopfront",
-  "Sweet counter display",
-  "Namkeen &amp; farsan display",
-  "Chaat counter in action",
-  "Kaju katli, freshly cut",
-  "Mohan thal being prepared",
-  "Packed namkeen, sealed for retail",
-  "Diwali gift hamper",
-  "Fresh samosas, hot off the counter",
-  "City Light outlet shopfront",
-  "Sev puri being assembled",
-  "Rasmalai, ready to serve",
-  "Wedding order boxes",
-  "Manufacturing unit — namkeen frying",
-  "Festival mithai spread",
-  "Bakery counter",
+// Captions describe what's actually in each photo (checked visually) rather
+// than reusing the old placeholder set, which assumed close-up product/action
+// shots these photos aren't — they're mostly wide interior/aisle views.
+// Width/height are each photo's real intrinsic size (read from the file) so
+// the masonry grid reserves the right space instead of guessing.
+const photos = [
+  { file: "img-1.jpeg", caption: "Shop interior — sweet counter and store layout", width: 318, height: 159 },
+  { file: "img-2.jpeg", caption: "Namkeen &amp; packaged snacks aisle", width: 194, height: 259 },
+  { file: "img-3.jpeg", caption: "Shop interior, view towards the entrance", width: 318, height: 159 },
+  { file: "img-4.jpeg", caption: "Packaged snacks display near the entrance", width: 192, height: 192 },
+  { file: "img-5.jpeg", caption: "Dry fruits &amp; sweets shelf", width: 192, height: 192 },
+  { file: "img-6.jpeg", caption: "Fully stocked namkeen aisle", width: 192, height: 144 },
+  { file: "img-7.jpeg", caption: "Juice &amp; beverage counter", width: 318, height: 159 },
+  { file: "img-8.jpeg", caption: "Gathiya counter", width: 318, height: 159 },
+  { file: "img-9.jpeg", caption: "Packaged namkeen shelf", width: 192, height: 192 },
+  { file: "img-10.jpeg", caption: "Biscuits &amp; packaged snacks aisle", width: 318, height: 159 },
+  { file: "img-11.jpeg", caption: "Bright aisle with natural light", width: 318, height: 159 },
+  { file: "img-12.jpeg", caption: "Dry fruits &amp; bulk namkeen display", width: 259, height: 194 },
+  { file: "img-13.jpeg", caption: "Packed farsan counter", width: 259, height: 194 },
+  { file: "img-14.jpeg", caption: "Shelves of packed namkeen varieties", width: 225, height: 225 },
+  { file: "img-15.jpeg", caption: "Bulk namkeen &amp; snacks display", width: 194, height: 259 },
+  { file: "img-16.jpeg", caption: "Assorted namkeen mix", width: 252, height: 200 },
 ];
 
-const items = captions
+const items = photos
   .map(
-    (c, i) => `<button class="gallery-grid__item" type="button" data-full="/img/placeholder-4x3.svg">
-        <img src="/img/placeholder-4x3.svg" alt="${c} — Dharti Namkeen &amp; Sweets (placeholder, awaiting owner photography)" width="400" height="${i % 3 === 0 ? 300 : i % 3 === 1 ? 500 : 400}" loading="lazy" decoding="async">
+    (p) => `<button class="gallery-grid__item" type="button" data-full="/img/gallery/${p.file}">
+        <img src="/img/gallery/${p.file}" alt="${p.caption} — Dharti Namkeen &amp; Sweets" width="${p.width}" height="${p.height}" loading="lazy" decoding="async">
       </button>`
   )
   .join("\n      ");
@@ -34,7 +39,7 @@ ${breadcrumbs(trail)}
 <header class="container section--tight">
   <p class="eyebrow">A look inside</p>
   <h1>Gallery</h1>
-  <p class="hero__lede">Every photo here is a placeholder. We only publish original photography the business owns the rights to (PLAN.md §9) — real photos replace these as soon as they're supplied.</p>
+  <p class="hero__lede">A look inside our store — sweets counter, namkeen aisles and packed farsan on the shelf.</p>
 </header>
 
 <section class="section">
@@ -60,7 +65,7 @@ page({
   route: "/gallery/",
   path: "gallery/index.html",
   title: "Gallery | Dharti Namkeen &amp; Sweets",
-  description: "Photos from Dharti Namkeen &amp; Sweets, Surat — sweets, namkeen, chaat and both outlets. Placeholder images pending original photography.",
+  description: "Photos from inside Dharti Namkeen &amp; Sweets, Surat — the sweet counter, namkeen aisles and packed farsan on the shelf.",
   activeRoute: "gallery",
   extraHead: breadcrumbJsonLd(trail, "/gallery/"),
   bodyScripts: ["lightbox.js"],

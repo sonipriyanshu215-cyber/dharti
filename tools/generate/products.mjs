@@ -105,7 +105,7 @@ categoryPage({
     productCard({ name: "Motichoor Laddu", image: "motichoor-laddu", desc: "Fine boondi pearls bound in sugar syrup.", tags: ["bestseller", "veg"] }),
     productCard({ name: "Bikaneri Laddu", image: "bikaneri-laddu", desc: "Coarser boondi laddu with a nuttier bite.", tags: ["veg"] }),
     productCard({ name: "Desi Ghee Boondi Laddu", image: "desi-ghee-boondi-laddu", desc: "Classic boondi laddu made with pure desi ghee.", tags: ["veg"] }),
-    productCard({ name: "Dharti Special Peda", desc: "Our house peda recipe — soft, mildly sweet mawa.", tags: ["bestseller", "veg"] }),
+    productCard({ name: "Dharti Special Peda", image: "dharti-special-peda", desc: "Our house peda recipe — soft, mildly sweet mawa.", tags: ["bestseller", "veg"] }),
     productCard({ name: "Kesar Peda", image: "kesar-peda", desc: "Mawa peda flavoured with saffron and cardamom.", tags: ["veg"] }),
     productCard({ name: "Milk Cake", image: "milk-cake", desc: "Dense, caramelised milk sweet with a fudgy texture.", tags: ["veg"] }),
     productCard({ name: "Angoor Rabdi", image: "angoor-rabdi", desc: "Small paneer balls soaked in thickened, sweetened milk.", tags: ["veg"] }),
